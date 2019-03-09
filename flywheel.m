@@ -22,8 +22,6 @@ C = [1 0];
 A_d = expm(A*dt);
 B_d = pinv(A)*(A_d - eye(size(A_d)))*B;
 
-%I have no idea how to pick poles
-%so here are 971's
 P_K = [.6 .981];
 P_L = [.45-.07i,.45+.07i];
 K = place(A_d,B_d,P_K);
